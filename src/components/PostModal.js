@@ -35,6 +35,7 @@ class PostModal extends Component {
                 uploadResults(e.target['name'].value, e.target['result'].value, e.target['message'].value, parseInt(wordle[0]), parseInt(wordle[1])).then(result => {
                     //Call parents function to close modal on the homepage
                     this.props.closeModalFunction(1);
+                    window.location.reload();
                 });
             } else {
                 //If wordle string does not extract 3 numbers, show this error
