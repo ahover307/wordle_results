@@ -1,15 +1,32 @@
+body {
+  background-color: #dEE6E5;
+}
+
 .FileList {
-    align-items: center;
+  align-items: center;
 }
 
 .FileCard {
-    background-color: #DEE6E5;
+  background-color: #6AAA64;
 }
 
 .Home {
 
 }
 
+.MuiButton-root {
+  background-color: #65D262 !important;
+  color: #FFFFFF !important;
+}
+
+.MuiTypography-h6, .MuiTypography-body1, .MuiTypography-body2 {
+  color: #FFFFFF !important;
+}
+
+h4 {
+  color: #383838 !important;
+}
+
 .Post {
-    background-color: #CAD1D0;
+  background-color: #CAD1D0;
 }
