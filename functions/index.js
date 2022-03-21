@@ -18,11 +18,11 @@ exports.dailyEmail = functions.pubsub.schedule('0 7 * * *').timeZone("America/Ne
     functions.logger.info("Beginning Run with context: " + context, {structuredData: true});
 
     functions.logger.info("Finding all wordles from yesterday", {structuredData: true});
-    const wordle = 243 + (((new Date(new Date().toLocaleDateString()).getTime()) - (new Date("2/17/2022")).getTime()) / (1000 * 3600 * 24)) - 1;
+    const wordle = 269 + (((new Date(new Date().toLocaleDateString()).getTime()) - (new Date("3/15/2022")).getTime()) / (1000 * 3600 * 24)) - 1;
     functions.logger.info("Wordle : " + wordle, {structuredData: true});
 
     let wordleResults = [];
-    await admin.firestore().collection('daily_results').where('wordle', '==', wordle).orderBy('guess', "asc").get()
+    await admin.firestore().collection('daily_results').where('wordle', '==', wordle).orderBy('guess', "asc").orderBy('submissionTime').get()
         .then((result) => {
             //If result exists
             if (result !== undefined && result.length !== 0) {

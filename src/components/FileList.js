@@ -6,7 +6,7 @@ import {Card, CardContent, Grid, Typography} from "@mui/material";
 class FileList extends Component {
     state = {
         //Calculates the wordle round based on the amount of days since the 17th of february, when i first created this
-        wordle: 243 + (((new Date(new Date().toLocaleDateString()).getTime()) - (new Date("2/17/2022")).getTime()) / (1000 * 3600 * 24)),
+        wordle: 269 + (((new Date(new Date().toLocaleDateString()).getTime()) - (new Date("3/15/2022")).getTime()) / (1000 * 3600 * 24)),
         files: []
     };
 

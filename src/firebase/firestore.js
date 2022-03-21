@@ -9,7 +9,7 @@ const path = 'daily_results'
 async function queryByResults(wordle) {
     return (
         await getDocs(
-            query(collection(db, path), where('wordle', '==', wordle), orderBy('guess', "asc"))
+            query(collection(db, path), where('wordle', '==', wordle), orderBy('guess', "asc"), orderBy('submissionTime'))
         )
     );
 }
